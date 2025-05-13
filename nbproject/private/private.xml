@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lenovo/Desktop/Offline/votingsys/src/com/voting/main/dashboard.java</file>
-            <file>file:/C:/Users/Lenovo/Desktop/Offline/votingsys/src/com/voting/candidates/Candidates.java</file>
-            <file>file:/C:/Users/Lenovo/Desktop/Offline/votingsys/src/com/voting/studentrecords/StudentRecords.java</file>
+            <file>file:/C:/Users/Lenovo/Desktop/Offline/offline_voting/src/com/voting/controller/results.java</file>
+            <file>file:/C:/Users/Lenovo/Desktop/Offline/offline_voting/src/com/voting/result/Result.java</file>
+            <file>file:/C:/Users/Lenovo/Desktop/Offline/offline_voting/src/com/voting/components/progressbar/ProgressBarCustom.java</file>
         </group>
     </open-files>
 </project-private>
