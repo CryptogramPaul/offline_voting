@@ -2,6 +2,7 @@
 package com.voting.controller;
 
 import com.voting.candidates.Candidates;
+import static com.voting.candidates.Candidates.CandidateDelete;
 import static com.voting.candidates.Candidates.CandidateSave;
 import static com.voting.candidates.Candidates.biodata;
 import static com.voting.candidates.Candidates.can_course;
@@ -119,7 +120,8 @@ public class candidates {
         biodata.setSelected(false);
         rf.setSelected(false);
         gm.setSelected(false);
-        
+        CandidateDelete.setEnabled(false);
+        Candidates.CandidateUpdate = 0;
         showRecord();       
     }
     

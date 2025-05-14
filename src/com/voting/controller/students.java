@@ -106,6 +106,7 @@ public class students {
         CourseFilter.setSelectedIndex(0);
         Course.setSelectedIndex(0);
         StudentDelete.setEnabled(false);
+        StudentRecords.OperationUpdate = 0;
         showRecord();       
     }
 

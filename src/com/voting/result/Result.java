@@ -32,9 +32,9 @@ public class Result extends javax.swing.JInternalFrame {
         jLabel11 = new javax.swing.JLabel();
         bsed = new com.voting.components.progressbar.ProgressBarCustom();
         bsict = new com.voting.components.progressbar.ProgressBarCustom();
-        progressBarCustom3 = new com.voting.components.progressbar.ProgressBarCustom();
-        progressBarCustom4 = new com.voting.components.progressbar.ProgressBarCustom();
-        progressBarCustom5 = new com.voting.components.progressbar.ProgressBarCustom();
+        bscje = new com.voting.components.progressbar.ProgressBarCustom();
+        bsit = new com.voting.components.progressbar.ProgressBarCustom();
+        bshm = new com.voting.components.progressbar.ProgressBarCustom();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(106, 147, 44));
@@ -132,13 +132,13 @@ public class Result extends javax.swing.JInternalFrame {
         bsict.setForeground(new java.awt.Color(255, 102, 102));
         bsict.setValue(25);
 
-        progressBarCustom3.setForeground(new java.awt.Color(153, 153, 255));
-        progressBarCustom3.setValue(60);
+        bscje.setForeground(new java.awt.Color(153, 153, 255));
+        bscje.setValue(60);
 
-        progressBarCustom4.setValue(14);
+        bsit.setValue(14);
 
-        progressBarCustom5.setForeground(new java.awt.Color(255, 204, 204));
-        progressBarCustom5.setValue(50);
+        bshm.setForeground(new java.awt.Color(255, 204, 204));
+        bshm.setValue(50);
 
         javax.swing.GroupLayout panelShadow4Layout = new javax.swing.GroupLayout(panelShadow4);
         panelShadow4.setLayout(panelShadow4Layout);
@@ -147,11 +147,11 @@ public class Result extends javax.swing.JInternalFrame {
             .addGroup(panelShadow4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelShadow4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(progressBarCustom4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(progressBarCustom3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bsit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bscje, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bsict, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bsed, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(progressBarCustom5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bshm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelShadow4Layout.createSequentialGroup()
                         .addGroup(panelShadow4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,15 +182,15 @@ public class Result extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(progressBarCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bscje, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressBarCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bsit, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressBarCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bshm, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -238,11 +238,17 @@ public class Result extends javax.swing.JInternalFrame {
         results.GetNoOfVotes();
         results.GetBSED();
         results.GetIct();
+        results.GetBscje();
+        results.GetBsit();
+        results.GetBshm();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static com.voting.components.progressbar.ProgressBarCustom bscje;
     public static com.voting.components.progressbar.ProgressBarCustom bsed;
+    public static com.voting.components.progressbar.ProgressBarCustom bshm;
     public static com.voting.components.progressbar.ProgressBarCustom bsict;
+    public static com.voting.components.progressbar.ProgressBarCustom bsit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -257,9 +263,6 @@ public class Result extends javax.swing.JInternalFrame {
     private com.voting.components.panel.PanelShadow panelShadow1;
     private com.voting.components.panel.PanelShadow panelShadow3;
     private com.voting.components.panel.PanelShadow panelShadow4;
-    private com.voting.components.progressbar.ProgressBarCustom progressBarCustom3;
-    private com.voting.components.progressbar.ProgressBarCustom progressBarCustom4;
-    private com.voting.components.progressbar.ProgressBarCustom progressBarCustom5;
     public static javax.swing.JLabel total_students;
     // End of variables declaration//GEN-END:variables
 }

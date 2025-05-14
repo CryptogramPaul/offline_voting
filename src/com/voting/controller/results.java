@@ -1,8 +1,11 @@
 package com.voting.controller;
 
 import com.voting.connection.database;
+import static com.voting.result.Result.bscje;
 import static com.voting.result.Result.bsed;
+import static com.voting.result.Result.bshm;
 import static com.voting.result.Result.bsict;
+import static com.voting.result.Result.bsit;
 import static com.voting.result.Result.no_votes;
 import static com.voting.result.Result.total_students;
 import java.sql.SQLException;
@@ -58,7 +61,7 @@ public class results {
     public static void GetBSED(){
         
         try{     
-            int bsed_count = 0;
+            int vote_count = 0;
             int students_count = 0;
             
             database.openConn();
@@ -71,7 +74,7 @@ public class results {
             database.rs =  database.ps.executeQuery();
 
             while (database.rs.next() ) {  
-                bsed_count = database.rs.getInt("votes");
+                vote_count = database.rs.getInt("votes");
             }
             
             String total_students = "SELECT count(*) as students FROM tb_students WHERE course = 'BSED' OR course = 'BTVTED' OR course = 'BEED' ";
@@ -82,12 +85,12 @@ public class results {
                 students_count = database.rs.getInt("students");
             }
             
-            double percentage = (bsed_count * 100) / students_count;
+            double percentage = students_count > 0 ? (vote_count * 100) / students_count : 0;
             
             bsed.setValue((int) Double.parseDouble(String.format("%.2f", percentage)));
-            System.out.println(String.format("%.2f", percentage) + "%" );
-            System.out.println(bsed_count);
-            System.out.print(students_count);
+//            System.out.println(String.format("%.2f", percentage) + "%" );
+//            System.out.println(bsed_count);
+//            System.out.print(students_count);
             
         } catch ( SQLException e ) {
             JOptionPane.showMessageDialog(null, e);
@@ -124,9 +127,51 @@ public class results {
                 students_count = database.rs.getInt("students");
             }
             
-            double percentage = (vote_count * 100) / students_count;
+            double percentage = students_count > 0 ? (vote_count * 100) / students_count : 0;
             
             bsict.setValue((int) Double.parseDouble(String.format("%.2f", percentage)));
+//            System.out.println(String.format("%.2f", percentage) + "%" );
+//            System.out.println(vote_count);
+//            System.out.print(students_count);
+            
+        } catch ( SQLException e ) {
+            JOptionPane.showMessageDialog(null, e);
+        } finally {
+            database.closeConn();
+        }
+       
+    }
+    
+    public static void GetBscje(){
+        
+        try{     
+            int vote_count = 0;
+            int students_count = 0;
+            
+            database.openConn();
+            
+            String sql_bsed = "SELECT count(*) as votes " +
+"                                                FROM tb_vote a \n" +
+"                                                LEFT JOIN tb_students b ON a.studid = b.studid \n" +
+"                                                WHERE b.course = 'BSCJE' ";
+            database.ps = database.conn.prepareStatement(sql_bsed);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                vote_count = database.rs.getInt("votes");
+            }
+            
+            String total_students = "SELECT count(*) as students FROM tb_students WHERE course = 'BSCJE' ";
+            database.ps = database.conn.prepareStatement(total_students);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                students_count = database.rs.getInt("students");
+            }
+            
+            double percentage = students_count > 0 ? (vote_count * 100) / students_count : 0;
+            
+            bscje.setValue((int) Double.parseDouble(String.format("%.2f", percentage)));
             System.out.println(String.format("%.2f", percentage) + "%" );
             System.out.println(vote_count);
             System.out.print(students_count);
@@ -138,4 +183,87 @@ public class results {
         }
        
     }
+    public static void GetBsit(){
+        
+        try{     
+            int vote_count = 0;
+            int students_count = 0;
+            
+            database.openConn();
+            
+            String sql_bsed = "SELECT count(*) as votes " +
+"                                                FROM tb_vote a \n" +
+"                                                LEFT JOIN tb_students b ON a.studid = b.studid \n" +
+"                                                WHERE b.course = 'BSIT' ";
+            database.ps = database.conn.prepareStatement(sql_bsed);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                vote_count = database.rs.getInt("votes");
+            }
+            
+            String total_students = "SELECT count(*) as students FROM tb_students WHERE course = 'BSIT' ";
+            database.ps = database.conn.prepareStatement(total_students);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                students_count = database.rs.getInt("students");
+            }
+            
+            double percentage = students_count > 0 ? (vote_count * 100) / students_count : 0;
+            
+            bsit.setValue((int) Double.parseDouble(String.format("%.2f", percentage)));
+//            System.out.println(String.format("%.2f", percentage) + "%" );
+//            System.out.println(vote_count);
+//            System.out.print(students_count);
+            
+        } catch ( SQLException e ) {
+            JOptionPane.showMessageDialog(null, e);
+        } finally {
+            database.closeConn();
+        }
+       
+    }
+    public static void GetBshm(){
+        
+        try{     
+            int vote_count = 0;
+            int students_count = 0;
+            
+            database.openConn();
+            
+            String sql_bsed = "SELECT count(*) as votes " +
+"                                                FROM tb_vote a \n" +
+"                                                LEFT JOIN tb_students b ON a.studid = b.studid \n" +
+"                                                WHERE b.course = 'BSHM' ";
+            database.ps = database.conn.prepareStatement(sql_bsed);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                vote_count = database.rs.getInt("votes");
+            }
+            
+            String total_students = "SELECT count(*) as students FROM tb_students WHERE course = 'BSHM' ";
+            database.ps = database.conn.prepareStatement(total_students);
+            database.rs =  database.ps.executeQuery();
+
+            while (database.rs.next() ) {  
+                students_count = database.rs.getInt("students");
+            }
+            
+            double percentage = students_count > 0 ? (vote_count * 100) / students_count : 0;
+            
+            bshm.setValue((int) Double.parseDouble(String.format("%.2f", percentage)));
+//            System.out.println(String.format("%.2f", percentage) + "%" );
+//            System.out.println(vote_count);
+//            System.out.print(students_count);
+            
+        } catch ( SQLException e ) {
+            JOptionPane.showMessageDialog(null, e);
+        } finally {
+            database.closeConn();
+        }
+       
+    }
+    
 }

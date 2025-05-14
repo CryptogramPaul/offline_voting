@@ -196,11 +196,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="progressBarCustom4" alignment="1" max="32767" attributes="0"/>
-                          <Component id="progressBarCustom3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="bsit" alignment="1" max="32767" attributes="0"/>
+                          <Component id="bscje" alignment="1" max="32767" attributes="0"/>
                           <Component id="bsict" alignment="1" max="32767" attributes="0"/>
                           <Component id="bsed" alignment="1" max="32767" attributes="0"/>
-                          <Component id="progressBarCustom5" max="32767" attributes="0"/>
+                          <Component id="bshm" max="32767" attributes="0"/>
                           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -236,15 +236,15 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="progressBarCustom3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="bscje" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="progressBarCustom4" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="bsit" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel11" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="progressBarCustom5" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="bshm" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace pref="31" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -329,26 +329,35 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
-            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="progressBarCustom3">
+            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="bscje">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="value" type="int" value="60"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
-            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="progressBarCustom4">
+            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="bsit">
               <Properties>
                 <Property name="value" type="int" value="14"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
-            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="progressBarCustom5">
+            <Component class="com.voting.components.progressbar.ProgressBarCustom" name="bshm">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
                 <Property name="value" type="int" value="50"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
